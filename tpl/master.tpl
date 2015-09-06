@@ -11,6 +11,9 @@ footer{font-size:.8em;background:#235;color:#fff;padding:10px 0;}
 </head>
 <body>
 <h1><?= $st["title"]?></h1>
+<? foreach ($t->mn as $m): ?>
+<a href='<?= $m["url"]?>'><?=$m["name"] ?></a> 
+<? endforeach ?>
 <? include $t->content ?>
 <footer>
 <div class="cnt">

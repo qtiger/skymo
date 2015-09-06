@@ -4,11 +4,14 @@ class fTempl {
   private $path="tpl/";
   public $pg=array();
   public $st=array();
+  public $mn=array();
   public $content="";
 
   function __construct($page,$site) {
   $this->pg = $page;                  
   $this->st = $site;
+  if (array_key_exists("menu",$this->pg))
+    $this->mn = skymo::getJson(_JSONDIR_ . $this->pg["menu"] . ".json");
   if (array_key_exists("json",$this->pg)) {
     $json = skymo::getJson(_JSONDIR_ . $this->pg["json"] . ".json");
     if (is_array($json)) foreach ($json as $item=>$val)

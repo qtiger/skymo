@@ -1,5 +1,5 @@
 {"site":{"name":"skymo","title":"skymo","ftr":"&copy;2015 skymo"},
-"pages":{"/":{"title":"Home Page","url":"home","tpl":"home"},
-"about":{"title":"About","url":"about","tpl":"article"},
-"news":{"title":"News","json":"news","url":"news","tpl":"list"}}
+"pages":{"/":{"title":"Home Page","url":"home","tpl":"home","menu":"menu"},
+"about":{"title":"About","url":"about","tpl":"article","menu":"menu"},
+"news":{"title":"News","json":"news","url":"news","tpl":"list","menu":"menu"}}
 }
