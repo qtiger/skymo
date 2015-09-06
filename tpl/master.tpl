@@ -9,6 +9,8 @@ h1 {font-size:1.3em;padding:8px;margin-top:0}
 a{background:#235;color:#fff;padding:3px 9px;text-decoration:none;border-radius:5px;font-weight:bold;}
 .cnt{width:96%;margin:auto;}
 footer{font-size:.8em;background:#235;color:#fff;padding:10px 0;}
+@media(min-width:1000px){
+.cnt{width:960px}}
 </style>
 </head>
 <body>
