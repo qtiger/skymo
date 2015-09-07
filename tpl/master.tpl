@@ -6,7 +6,8 @@
 body{font-family:sans-serif;margin:0}
 header {background:#235;color:#fff;}
 h1 {font-size:1.3em;padding:8px;margin-top:0}
-a{background:#235;color:#fff;padding:3px 9px;text-decoration:none;border-radius:5px;font-weight:bold;}
+a{text-decoration:none;font-weight:bold;color:#ccc;}
+a.btn{background:#235;color:#fff;padding:3px 9px;border-radius:5px;}
 .cnt{width:96%;margin:auto;}
 footer{font-size:.8em;background:#235;color:#fff;padding:10px 0;}
 @media(min-width:1000px){
@@ -21,7 +22,7 @@ footer{font-size:.8em;background:#235;color:#fff;padding:10px 0;}
 </header>
 <div class="cnt">
 <? foreach ($mn["main"] as $m): ?>
-<a href='<?= $m["url"]?>'><?=$m["name"] ?></a> 
+<a href='<?= $m["url"]?>' class="btn"><?=$m["name"] ?></a> 
 <? endforeach ?>
 <? include $t->content ?>
 </div>
