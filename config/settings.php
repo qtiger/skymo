@@ -2,4 +2,5 @@
 $siteFile ="core/site.json";
 define(_JSONDIR_,"core/");
 define(_TPLEXT_,".tpl");
+define(_PAGETAG_,"pages");
 ?>
