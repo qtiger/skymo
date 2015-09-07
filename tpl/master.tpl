@@ -20,7 +20,7 @@ footer{font-size:.8em;background:#235;color:#fff;padding:10px 0;}
 </div>
 </header>
 <div class="cnt">
-<? foreach ($t->mn as $m): ?>
+<? foreach ($mn["main"] as $m): ?>
 <a href='<?= $m["url"]?>'><?=$m["name"] ?></a> 
 <? endforeach ?>
 <? include $t->content ?>

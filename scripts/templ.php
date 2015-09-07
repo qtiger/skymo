@@ -23,6 +23,7 @@ class fTempl {
     $t=$this;
     $st=$t->st;
     $pg=$t->pg;
+    $mn=$t->mn;
     if (array_key_exists("tpl",$t->pg))
       $t->content = $t->pg["tpl"] . _TPLEXT_;
     if ($t->content=="" || file_exists($this->path . $t->content))
