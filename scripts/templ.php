@@ -19,6 +19,12 @@ class fTempl {
     }
   }
 
+  function get($file) {
+    if (file_exists(_CNTDIR_ . $file . _CNTEXT_))
+      include (_CNTDIR_ . $file . _CNTEXT_);
+    elseif (_DEBUG_) echo "Get: Content file $file not found";
+    }
+
   function show() {
     $t=$this;
     $st=$t->st;
