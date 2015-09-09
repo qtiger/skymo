@@ -1,7 +1,7 @@
 <?php
 require_once "config/localsettings.php";
-require_once "scripts/templ.php";
-require_once "scripts/skymo.php";
+require_once _SCRDIR_ . "templ.php";
+require_once _SCRDIR_ . "skymo.php";
 
 $j=skymo::getJson($siteFile);
 if (is_array($j)) {
