@@ -1,7 +1,7 @@
 <?php
 class fTempl {
   private $tmpl="master.tpl";
-  private $path="tpl/";
+  private $path=_TPLDIR_;
   public $pg=array();
   public $st=array();
   public $mn=array();
@@ -14,8 +14,10 @@ class fTempl {
     $this->mn = skymo::getJson(_JSONDIR_ . $this->pg["menu"] . ".json");
   if (array_key_exists("json",$this->pg)) {
     $json = skymo::getJson(_JSONDIR_ . $this->pg["json"] . ".json");
-    if (is_array($json)) foreach ($json as $item=>$val)
-      $this->{$item}=$val;                        
+    if (is_array($json)) {
+      foreach ($json as $item=>$val)
+        $this->{$item}=array_reverse($val);
+      }
     }
   }
 

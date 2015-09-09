@@ -7,6 +7,7 @@
 body{font-family:'Roboto', sans-serif;margin:0}
 header {background:#235;color:#fff;}
 h1 {font-size:1.5em;padding:8px;margin-top:0;font-family:'Fredoka One';font-weight:normal;}
+h3{border-bottom:1px solid #235;}
 a{text-decoration:none;font-weight:bold;color:#ccc;}
 a.btn:link,a.btn:visited{background:#235;color:#fff;padding:3px 9px;border-radius:5px;}
 a.btn:hover{background:#457;}
