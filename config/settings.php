@@ -4,6 +4,7 @@ define(_JSONDIR_,"core/json/");
 define(_CNTDIR_,"core/content/");
 define(_SCRDIR_,"core/scripts/");
 define(_TPLDIR_,"core/tpl/");
+define(_MDDIR_,"core/md/");
 
 # The following lines determine the file extensions that skymo files use
 # eg mytemplate.tpl
