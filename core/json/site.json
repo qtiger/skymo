@@ -1,5 +1,5 @@
 {"site":{"name":"skymo","title":"skymo","ftr":"&copy;2015 skymo<br><a href='https://github.com/qtiger/skymo'>skymo</a> on GitHub"},
-"pages":{"/":{"title":"Home Page","url":"home","tpl":"home","menu":"menu"},
-"about":{"title":"About","url":"about","tpl":"article","menu":"menu"},
-"news":{"title":"News","json":"news","url":"news","tpl":"list","menu":"menu"}}
+"pages":{"/":{"title":"Home Page","tpl":"home","menu":"menu","cnt":"home"},
+"about":{"title":"About","tpl":"article","menu":"menu"},
+"news":{"title":"News","json":"news","tpl":"list","menu":"menu"}}
 }

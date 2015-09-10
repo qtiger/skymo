@@ -3,12 +3,22 @@ require_once "config/localsettings.php";
 require_once _SCRDIR_ . "templ.php";
 require_once _SCRDIR_ . "skymo.php";
 
-$j=skymo::getJson($siteFile);
+parse_str($_SERVER['QUERY_STRING'],$q);
+
+$url="/";
+if (array_key_exists(_ADMPAR_,$q)) {
+  $j = skymo::getJson($admFile);
+  $queryPage = _ADMPAR_;
+  }
+else {
+  $j=skymo::getJson($siteFile);
+  $queryPage = _PAGEPAR_;
+  }
+
 if (is_array($j)) {
   if (array_key_exists(_PAGETAG_,$j)) {
-    parse_str($_SERVER['QUERY_STRING'],$q);
-    if (array_key_exists("p",$q)) $url = $q["p"];
-    else $url ="/";
+    if (array_key_exists($queryPage,$q)) $url = $q[$queryPage];
+    if ($url=="") $url="/";
     if (array_key_exists($url,$j[_PAGETAG_])) {
       $t = new fTempl($j[_PAGETAG_][$url],$j["site"]);
       $t->show();
@@ -17,5 +27,5 @@ if (is_array($j)) {
     }
   elseif (_DEBUG_) trigger_error ("Page element not found in site file");
   }
-elseif (_DEBUG_) trigger_error("Site file not found");
+elseif (_DEBUG_) trigger_error("Error in Site file");
 ?>

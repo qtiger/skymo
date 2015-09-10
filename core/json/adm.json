@@ -1,0 +1,3 @@
+{"site":{"name":"skymo Admin","title":"skymo admin","ftr":"&copy;2015 skymo"},
+"pages":{"/":{"title":"Admin Page","tpl":"adm","menu":"admmenu"}}
+}

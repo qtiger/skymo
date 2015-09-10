@@ -3,8 +3,8 @@
 define(_JSONDIR_,"core/json/");
 define(_CNTDIR_,"core/content/");
 define(_SCRDIR_,"core/scripts/");
-define(_TPLDIR_,"core/tpl/");
-define(_MDDIR_,"core/md/");
+define(_TPLDIR_,"core/tpl/"); # Templates
+define(_MDDIR_,"core/md/"); # Markdown
 
 # The following lines determine the file extensions that skymo files use
 # eg mytemplate.tpl
@@ -16,5 +16,11 @@ define(_MDEXT_,".md");
 # file for the list of web pages in the site
 define(_PAGETAG_,"pages");
 
+# The url parameters
+define (_PAGEPAR_,"p");
+define (_ADMPAR_,"adm");
+
 # The site file is the json file which contains the website structure
-$siteFile =_JSONDIR_ ."site.json"; ?>
+$siteFile =_JSONDIR_ ."site.json";
+$admFile =_JSONDIR_ ."adm.json";
+?>
