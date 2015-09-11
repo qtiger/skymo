@@ -1,0 +1,6 @@
+[{"name":"Title","tag":"title"},
+{"name":"Template","tag":"tpl"},
+{"name":"Content","tag":"cnt"},
+{"name":"Menu","tag":"menu"},
+{"name":"Parameters","tag":"json"},
+{"name":"Script","tag":"scr"}]

@@ -1,14 +1,10 @@
-<h2>Admin</h2>
+<h2><?= $pg["title"]?></h2>
 <table>
-<tr><th>URL</th>
-<th>Content</th>
-<th>Fields</th>
-<th>Template</th></tr>
-<? foreach($t->sf["pages"] as $url=>$p): ?>
-  <tr><td><?= $url ?></td>
-  <td><?= $p["cnt"] ?></td>
-  <td><?= $p["json"] ?></td>
-  <td><?= $p["tpl"] ?></td></tr>
+<tr><th>Page Title</th>
+<th>URL</th></tr>
+<? foreach($t->sf[_PAGETAG_] as $url=>$p): ?>
+  <tr><td><a href='?adm=page&p=<?= $url ?>'><?= $p["title"] ?></a></td>
+  <td><?= $url ?></td></tr>
 <? endforeach?>
 </table>
 <br>

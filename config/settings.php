@@ -5,6 +5,7 @@ define(_CNTDIR_,"core/content/");
 define(_SCRDIR_,"core/scripts/");
 define(_TPLDIR_,"core/tpl/"); # Templates
 define(_MDDIR_,"core/md/"); # Markdown
+define(_FLDDIR_,"core/json/fields/"); # Field definitions
 
 # The following lines determine the file extensions that skymo files use
 # eg mytemplate.tpl
@@ -14,7 +15,7 @@ define(_MDEXT_,".md");
 
 # The page tag determines the json tag that skymo looks for in the site
 # file for the list of web pages in the site
-define(_PAGETAG_,"pages");
+define(_PAGETAG_,"page");
 
 # The url parameters
 define (_PAGEPAR_,"p");

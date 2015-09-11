@@ -1,3 +1,4 @@
-{"main":[{"name":"Home","url":"/skymo"},
+{"main":[{"name":"Site","url":"/skymo"},
+{"name":"Top","url":"?adm"},
 {"name":"Login","url":"?adm=login"}
 ]}
