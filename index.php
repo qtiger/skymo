@@ -21,6 +21,8 @@ if (is_array($j)) {
     if ($url=="") $url="/";
     if (array_key_exists($url,$j[_PAGETAG_])) {
       $t = new fTempl($j[_PAGETAG_][$url],$j["site"]);
+      if (array_key_exists("scr",$j[_PAGETAG_][$url]))
+        include _SCRDIR_ . $j[_PAGETAG_][$url] ["scr"]. ".php";
       $t->show();
       }
     else echo "404; Page $url not found";

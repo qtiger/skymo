@@ -16,6 +16,9 @@ a.btn:active{background:#457;}
 footer{font-size:.8em;background:#235;color:#fff;padding:10px 0;}
 @media(min-width:1000px){
 .cnt{width:960px}}
+table{border-collapse:collapse; width:100%}
+th{background:#235;color:#fff;text-align:left;}
+th,td{border:1px solid #235;padding:4px 12px;}
 </style>
 </head>
 <body>
