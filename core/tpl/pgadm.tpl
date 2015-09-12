@@ -1,13 +1,10 @@
-<h2><?= $pg["title"]?></h2>
-<table>
-<tr><th colspan="2">Page: <?= $t->sitepg['title'] ?></th>
-<tr><th>Field</th>
-<th>Value</th></tr>
-<tr><td>URL</td>
-<td><?= $t->pgurl ?></td></tr>
+<h2><?= $pg["title"]?> - <?= $t->sitepg['title'] ?></h2>
+<form>
+<label>URL</label><br>
+<input type="text" value ="<?= $t->pgurl ?>" name="url"><br>
 <? foreach($t->flds as $p): ?>
-  <tr><td><?= $p["name"] ?></td>
-  <td><?= $t->sitepg[$p['tag']] ?></td></tr>
+  <label><?= $p["name"] ?></label><br>
+  <input type="text" value="<?= $t->sitepg[$p['tag']] ?>" name=""><br>
 <? endforeach?>
-</table>
+</form>
 <br>
