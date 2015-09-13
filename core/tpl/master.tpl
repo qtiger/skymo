@@ -15,11 +15,15 @@
 <? foreach ($mn["main"] as $m): ?>
 <a href='<?= $m["url"]?>' class="btn"><?=$m["name"] ?></a> 
 <? endforeach ?>
+</div>
+<hr>
+<div class="cnt">
 <? include $t->content ?>
 </div>
 <footer>
 <div class="cnt">
-<?= $st["ftr"] ?>
+<?= $st["ftr"] ?><br>
+Version <?= _VERSION_ ?>
 </div>
 </footer>
 </body>

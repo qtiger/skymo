@@ -1,4 +1,5 @@
 {"site":{"name":"skymo Admin","title":"skymo admin","ftr":"&copy;2015 skymo"},
 "page":{"/":{"title":"Site Admin","tpl":"adm","menu":"admmenu","scr":"adm"},
-"page":{"title":"Page Admin","tpl":"pgadm","menu":"admmenu","scr":"adm"}}
+"page":{"title":"Page Admin","tpl":"pgadm","menu":"admmenu","scr":"adm"},
+"login":{"title":"Login","tpl":"login","menu":"admmenu","scr":"login"}}
 }

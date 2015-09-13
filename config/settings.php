@@ -1,4 +1,6 @@
 <?php
+define (_VERSION_, "v0.1.0");
+
 # The following lines determine where skymo looks for its files
 define(_JSONDIR_,"core/json/");
 define(_CNTDIR_,"core/content/");

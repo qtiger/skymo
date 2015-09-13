@@ -21,6 +21,14 @@ class fTempl {
     }
   }
 
+  function eBtn($name, $tag) {
+    $ret ="";
+    if ($name != "")
+      if ($tag == "tpl" || $tag == "cnt" || $tag == "json" || $tag == "scr" || $tag == "menu")
+        $ret = "<a href='?adm=file&nm=$name&tag=$tag'>Edit</a>";
+
+    return $ret;
+    }
   function get($file) {
     if (file_exists(_CNTDIR_ . $file . _CNTEXT_))
       include (_CNTDIR_ . $file . _CNTEXT_);
