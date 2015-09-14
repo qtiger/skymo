@@ -1,9 +1,10 @@
 <form action="?adm=login" method="post">
 <? if ($t->status == "ok"): ?>
-<p class="msg">Please enter your username and password to log in</p>
+<span class="msg">Please enter your username and password to log in</span>
 <? else: ?>
-<p class="err">Login failed. Please enter a valid username and password</p>
+<span class="err"><b>Login failed</b> - please enter a valid username and password</span>
 <? endif ?>
+<br><br>
 <label>Username</label><br>
 <input type="text" name="un"><br>
 <label>Password</label><br>

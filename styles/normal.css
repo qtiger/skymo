@@ -1,5 +1,5 @@
 body{font-family:'Roboto', sans-serif;margin:0}
-header, footer, a.btn, th {background:linear-gradient(#679,#013);color:#fff;}
+header, footer, a.btn, th {background:linear-gradient(#457,#013);color:#fff;}
 h1 {font-size:1.5em;padding:8px;margin:0 0 8px 0;font-family:'Fredoka One';font-weight:normal;}
 h2 {margin:.6em 0 0 0;}
 h3{border-bottom:1px solid #235;}
@@ -12,7 +12,7 @@ a.btn:active{background:#457;}
 .cnt{width:96%;margin:auto;}
 footer{font-size:.8em;padding:10px 0;}
 form{width:100%;background:linear-gradient(#fff,#eee);border:1px solid #ccc; border-radius:8px;padding:12px;box-sizing:border-box;margin:.4em 0;}
-input{padding:3px 9px;border-radius:5px;margin:6px 0;}
+input{padding:3px 9px;margin:6px 0;}
 label{font-weight:bold;padfing-left:4px;}
 @media(min-width:1000px){
 .cnt{width:960px}}
