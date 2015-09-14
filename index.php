@@ -26,7 +26,11 @@ if (is_array($j)) {
         include _SCRDIR_ . $j[_PAGETAG_][$url] ["scr"]. ".php";
       $t->show();
       }
-    else echo "404; Page $url not found";
+    else {
+      header("HTTP/1.0 404 Not Found");
+      include "errors/404.html";
+      exit();
+      }
     }
   elseif (_DEBUG_) trigger_error ("Page element not found in site file");
   }
