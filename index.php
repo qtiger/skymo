@@ -3,6 +3,12 @@ require_once "config/localsettings.php";
 require_once _SCRDIR_ . "templ.php";
 require_once _SCRDIR_ . "skymo.php";
 
+if (isset($allowedHost)) if ($_SERVER[HTTP_HOST] != $allowedHost) {
+  header("HTTP/1.0 404 Not Found");
+  include "errors/404.html";
+  exit();
+  }
+
 parse_str($_SERVER['QUERY_STRING'],$q);
 
 $url="/";
