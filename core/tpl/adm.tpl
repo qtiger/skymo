@@ -3,7 +3,7 @@
 <tr><th>Page Title</th>
 <th>URL</th></tr>
 <? foreach($t->sf[_PAGETAG_] as $url=>$p): ?>
-  <tr><td><a href='?adm=page&p=<?= $url ?>'><?= $p["title"] ?></a></td>
+  <tr><td><a href='page/<?= $url ?>'><?= $p["title"] ?></a></td>
   <td><?= $url ?></td></tr>
 <? endforeach?>
 </table>
