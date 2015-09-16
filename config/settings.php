@@ -30,4 +30,11 @@ define (_LOGINTIMEOUT_,600); # 600 seconds = 10mins
 # The site file is the json file which contains the website structure
 $siteFile =_JSONDIR_ ."site.json";
 $admFile =_JSONDIR_ ."adm.json";
+
+# User levels define how much of the site a user can see
+define (_USR_GUEST_,1); # Not logged in
+define (_USR_REGISTERED_,5); # Registered but not yet approved
+define (_USR_APPROVED_,10); # Normal logged in user
+define (_USR_EDITOR_,15); # Logged in user with permission to edit content
+define (_USR_ADMIN_,20); # Logged in with all permisions
 ?>

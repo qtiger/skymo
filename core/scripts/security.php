@@ -86,6 +86,10 @@ class userSecurity
 
    public function login($un, $pw)
      {
+     // Destroy any current session before 
+     // creating a new one
+     $this->logout();
+
      $this->loginStatus = "false";
      $this->loginLevel = 1;
      
@@ -115,8 +119,10 @@ class userSecurity
    
    public function logout()
      {
-     $_SESSION = array();
-     session_destroy();
+     if ($this->isLoggedIn()) {
+       $_SESSION = array();
+       session_destroy();
+       }
      }
      
    public function userlevel()
