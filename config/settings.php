@@ -1,6 +1,11 @@
 <?php
 define (_VERSION_, "v0.1.0");
 
+# Prefix if URL is not at site root. eg if
+# http://example.com/skymo prefix would be
+# /skymo/
+define (_URLPREFIX_,"/");
+
 # The following lines determine where skymo looks for its files
 define(_JSONDIR_,"core/json/");
 define(_CNTDIR_,"core/content/");

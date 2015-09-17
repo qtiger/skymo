@@ -1,6 +1,8 @@
 [{"name":"Title","tag":"title"},
 {"name":"Template","tag":"tpl"},
 {"name":"Content","tag":"cnt"},
-{"name":"Menu","tag":"menu"},
+{"name":"Menu Name","tag":"menu"},
+{"name":"Menu Item","tag":"mname"},
 {"name":"Parameters","tag":"json"},
-{"name":"Script","tag":"scr"}]
+{"name":"Script","tag":"scr"},
+{"name":"User Level","tag":"lvl"}]

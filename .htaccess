@@ -4,6 +4,6 @@ ErrorDocument 403 /errors/403.html
 RewriteEngine on
 RewriteRule ^([^/]+)/$ /?adm=$1&p=/ [QSA,L] 
 RewriteRule ^(.+)/([^.]+)$ /?adm=$1&p=$2 [QSA,L] 
-RewriteRule ^adm$ /?adm [QSA,L] 
+RewriteRule ^adm$ /?adm=adm [QSA,L] 
 RewriteRule ^login$ /?adm=login [QSA,L] 
 RewriteRule ^([^./]+)$ /?p=$1 [QSA,L] 

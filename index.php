@@ -27,9 +27,8 @@ if (is_array($j)) {
     if (array_key_exists($queryPage,$q)) $url = $q[$queryPage];
     if ($url=="") $url="/";
     if (array_key_exists($url,$j[_PAGETAG_])) {
-      $t = new fTempl($j[_PAGETAG_][$url],$j["site"]);
+      $t = new fTempl($j,$url);
       $t->q = $q;
-      $t->sec = new userSecurity();
       if (array_key_exists("scr",$j[_PAGETAG_][$url]))
         include _SCRDIR_ . $j[_PAGETAG_][$url] ["scr"]. ".php";
       $t->show();
