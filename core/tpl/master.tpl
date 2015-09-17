@@ -23,7 +23,8 @@
 <footer>
 <div class="cnt">
 <?= $st["ftr"] ?><br>
-Version <?= _VERSION_ ?>
+Version <?= _VERSION_ ?><br>
+<?= "TMO: " . $t->sec->tmo ?>
 </div>
 </footer>
 </body>

@@ -10,6 +10,7 @@ class userSecurity
 
   private $loginStatus='unset';
   private $loginLevel=1;
+  public $tmo=0;
   
   private $pwArr = null;
   private $errCode=0;
@@ -38,6 +39,7 @@ class userSecurity
       $_SESSION['loginLevel'] = 1;
       }
     else {
+      $this->tmo = $_SESSION["time"] - time();
       if (($_SESSION["time"] - time()) <0)
         $this->logout();
       else $_SESSION["time"] = time() + _LOGINTIMEOUT_;
@@ -54,85 +56,96 @@ class userSecurity
       return false;
     }
     
-   public function checkLogin($un, $pw)
-     {
-     $res = false;
+  public function checkLogin($un, $pw)
+    {
+    $res = false;
 
-     $j = skymo::getJson(_PASSWD_);
-     if ($j) {
-       if (array_key_exists("users",$j)) {
-         $this->pwArr = $j["users"];
-         if (array_key_exists($un,$this->pwArr)) {
-           $res = $this->pwVerify($pw,$this->pwArr[$un]["pw"]);
-           if (!$res) $this->errCode=4;
-           }
-         else $this->errCode=3;
-         }
-       else $this->errCode=2;
-       }
-     else $this->errCode=1;
-     return $res;
-     } 
+    $j = skymo::getJson(_PASSWD_);
+    if ($j) {
+      if (array_key_exists("users",$j)) {
+        $this->pwArr = $j["users"];
+        if (array_key_exists($un,$this->pwArr)) {
+          $res = $this->pwVerify($pw,$this->pwArr[$un]["pw"]);
+          if (!$res) $this->errCode=4;
+          }
+        else $this->errCode=3;
+        }
+      else $this->errCode=2;
+      }
+    else $this->errCode=1;
+    return $res;
+    } 
    
-   public function level ($un)
-     {
-     $level = 1;
+  public function level ($un)
+    {
+    $level = 1;
 
-     if (array_key_exists($un,$this->pwArr))
-       if (array_key_exists("lvl",$this->pwArr[$un]))
-         $level = $this->pwArr[$un]["lvl"];
-     return $level;
-     }
+    if (array_key_exists($un,$this->pwArr))
+      if (array_key_exists("lvl",$this->pwArr[$un]))
+        $level = $this->pwArr[$un]["lvl"];
+    return $level;
+    }
 
-   public function login($un, $pw)
-     {
-     // Destroy any current session before 
-     // creating a new one
-     $this->logout();
+  public function login($un, $pw)
+    {
+    // Destroy any current session before 
+    // creating a new one
+    $this->logout();
 
-     $this->loginStatus = "false";
-     $this->loginLevel = 1;
+    $this->loginStatus = "false";
+    $this->loginLevel = 1;
      
-     if ($this->checkLogin($un, $pw))
-       {
-       $this->loginStatus = "true";
-       $this->loginLevel = $this->level($un);
-       $_SESSION['user'] = sha1($un);
-       $_SESSION["time"] = time() + _LOGINTIMEOUT_;
-       $this->errCode =0;
-       }
+    if ($this->checkLogin($un, $pw))
+      {
+      $this->loginStatus = "true";
+      $this->loginLevel = $this->level($un);
+      $_SESSION['user'] = sha1($un);
+      $_SESSION["time"] = time() + _LOGINTIMEOUT_;
+      $this->errCode =0;
+      }
 
-     $_SESSION["loginStatus"] = $this->loginStatus;
-      $_SESSION['loginLevel'] = $this->loginLevel;
+    $_SESSION["loginStatus"] = $this->loginStatus;
+     $_SESSION['loginLevel'] = $this->loginLevel;
       
-      if ($this->loginStatus == "true")
-        return true;
-      else
-        return false;
-     }
+     if ($this->loginStatus == "true")
+       return true;
+     else
+       return false;
+    }
    
-   public function isCurUser($un)
-     {
-     if (sha1($un) == $_SESSION['user']) return true;
-     else return false;
-     }
+  public function isCurUser($un)
+    {
+    if (sha1($un) == $_SESSION['user']) return true;
+    else return false;
+    }
    
-   public function logout()
-     {
-     if ($this->isLoggedIn()) {
-       $_SESSION = array();
-       session_destroy();
-       }
-     }
+  public function logout()
+    {
+    if ($this->isLoggedIn()) {
+      $_SESSION = array();
+      session_destroy();
+      }
+    }
      
-   public function userlevel()
-     {
-     return $this->loginLevel;
-     }
+  public function userlevel()
+    {
+    return $this->loginLevel;
+    }
 
-   public function err()
-     {
-     return $this->errStr[$this->errCode];
-     }
+  public function viewPage($p,$menu=false) {
+    if (array_key_exists("lvl",$p))
+      $pLvl = $p["lvl"];
+    else $pLvl = 1;
+
+    if ($menu && $pLvl<0)
+      return $this->userLevel() <= -$pLvl;
+    else
+      return $this->userlevel() >= $pLvl;
+    }
+
+  public function err()
+    {
+    return $this->errStr[$this->errCode];
+    }
 }
 ?>

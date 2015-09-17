@@ -1,6 +1,6 @@
 {"site":{"name":"skymo Admin","title":"skymo admin","ftr":"&copy;2015 skymo"},
 "page":{"/":{"menu":"main","mname":"Home"},
-"adm":{"title":"Site Admin","tpl":"adm","menu":"main","scr":"adm","mname":"Admin"},
+"adm":{"title":"Site Admin","tpl":"adm","menu":"main","scr":"adm","mname":"Admin","lvl":"20"},
 "page":{"title":"Page Admin","tpl":"pgadm","scr":"adm"},
-"login":{"title":"Login","tpl":"login","menu":"main","scr":"login"}}
+"login":{"title":"Login","tpl":"login","scr":"login"}}
 }

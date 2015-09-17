@@ -2,5 +2,6 @@
 "page":{"/":{"title":"Home Page","tpl":"home","menu":"main","cnt":"home","mname":"Home"},
 "news":{"title":"News","json":"news","tpl":"list","menu":"main"},
 "about":{"title":"About","tpl":"article","menu":"main"},
-"adm":{"title":"Admin","menu":"main","lvl":"20"}
+"adm":{"title":"Admin","menu":"main","lvl":"20"},
+"login":{"title":"Login","menu":"main","lvl":"-1"}
 }}

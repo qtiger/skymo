@@ -9,14 +9,11 @@ class fTempl {
   public $content="";
   public $sec;
 
-  function __construct($sFile,$url) {
-    $this->sec = new userSecurity();
+  function __construct($sFile,$url,$sec) {
+    $this->sec = $sec;
     $this->sFile = $sFile;                  
     $this->pg = $sFile[_PAGETAG_][$url];                  
     $this->st = $sFile["site"];
-    //if (array_key_exists("menu",$this->pg))
-    //  $this->mn = skymo::getJson(_JSONDIR_ . $this->pg["menu"] . ".json");
-    $this->buildMenu();
     if (array_key_exists("json",$this->pg)) {
       $json = skymo::getJson(_JSONDIR_ . $this->pg["json"] . ".json");
       if (is_array($json)) {
@@ -28,10 +25,8 @@ class fTempl {
 
   private function buildMenu() {
     foreach ($this->sFile[_PAGETAG_] as $url=>$p) {
-      if (array_key_exists("lvl",$p)) $pLvl = $p['lvl'];
-      else $pLvl = 1;
-      if ($this->sec->userlevel() >= $pLvl) {
-          if (array_key_exists("menu",$p)) {
+      if ($this->sec->viewPage($p, true)) {
+        if (array_key_exists("menu",$p)) {
           if (array_key_exists("mname",$p)) $nm = $p['mname'];
           elseif (array_key_exists("title",$p)) $nm = $p['title'];
           else $nm = $url;
@@ -60,6 +55,7 @@ class fTempl {
     }
 
   public function show() {
+    $this->buildMenu();
     $t=$this;
     $st=$t->st;
     $pg=$t->pg;
