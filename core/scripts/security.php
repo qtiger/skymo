@@ -38,16 +38,18 @@ class userSecurity
       $_SESSION['loginStatus']="not-logged-in";
       $_SESSION['loginLevel'] = 1;
       }
-    else {
+    elseif (array_key_exists ("time",$_SESSION)) {
       $this->tmo = $_SESSION["time"] - time();
       if (($_SESSION["time"] - time()) <0)
         $this->logout();
       else $_SESSION["time"] = time() + _LOGINTIMEOUT_;
       }
-    $this->loginStatus = $_SESSION["loginStatus"];
-    $this->loginLevel = $_SESSION['loginLevel'];
-    }
-  
+    if (array_key_exists("loginStatus",$_SESSION)) {
+      $this->loginStatus = $_SESSION["loginStatus"];
+      $this->loginLevel = $_SESSION['loginLevel'];
+      }
+    }  
+
   public function isLoggedIn()
     {
     if ($this->loginStatus == "true")
@@ -88,10 +90,6 @@ class userSecurity
 
   public function login($un, $pw)
     {
-    // Destroy any current session before 
-    // creating a new one
-    $this->logout();
-
     $this->loginStatus = "false";
     $this->loginLevel = 1;
      
@@ -121,10 +119,9 @@ class userSecurity
    
   public function logout()
     {
-    if ($this->isLoggedIn()) {
-      $_SESSION = array();
-      session_destroy();
-      }
+    $_SESSION = array();
+    session_destroy();
+    $this->loginLevel = 1;
     }
      
   public function userlevel()
@@ -138,7 +135,7 @@ class userSecurity
     else $pLvl = 1;
 
     if ($menu && $pLvl<0)
-      return $this->userLevel() <= -$pLvl;
+      return $this->userlevel() <= -$pLvl;
     else
       return $this->userlevel() >= $pLvl;
     }
