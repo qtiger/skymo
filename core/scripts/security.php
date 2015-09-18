@@ -121,6 +121,7 @@ class userSecurity
     {
     $_SESSION = array();
     session_destroy();
+    $this->loginStatus = "logged-out";
     $this->loginLevel = 1;
     }
      

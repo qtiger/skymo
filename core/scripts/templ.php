@@ -1,7 +1,6 @@
 <?php
 class fTempl {
   private $tmpl="master.tpl";
-  private $path=_TPLDIR_;
   private $sFile = array();
   public $pg=array();
   public $st=array();
@@ -61,11 +60,13 @@ class fTempl {
     $pg=$t->pg;
     $mn=$t->mn;
     if (array_key_exists("tpl",$t->pg))
-      $t->content = $t->pg["tpl"] . _TPLEXT_;
-    if ($t->content=="" || file_exists($this->path . $t->content))
+      $t->content = _TPLDIR_ . $t->pg["tpl"] . _TPLEXT_;
+    elseif (array_key_exists("cnt",$t->pg))
+      $t->content = _CNTDIR_ . $t->pg["cnt"] . _CNTEXT_;
+    if ($t->content=="" || file_exists($t->content))
       {
       ob_start();
-      include $this->path . $this->tmpl;
+      include _TPLDIR_ . $this->tmpl;
       ob_end_flush();
       }
     elseif (_DEBUG_) trigger_error ("tpl {$t->content} not found");

@@ -1,8 +1,8 @@
 {"site":{"name":"skymo","title":"skymo","ftr":"&copy;2015 skymo<br><a href='https://github.com/qtiger/skymo'>skymo</a> on GitHub"},
 "page":{"/":{"title":"Home Page","tpl":"home","menu":"main","cnt":"home","mname":"Home"},
 "news":{"title":"News","json":"news","tpl":"list","menu":"main"},
-"about":{"title":"About","tpl":"article","menu":"main"},
+"about":{"title":"About","cnt":"article","menu":"main"},
 "adm":{"title":"Admin","menu":"main","lvl":"20"},
-"logout":{"title":"Logout","menu":"main","lvl":"2","tpl":"logout","scr":"logout"},
+"logout":{"title":"Logout","menu":"main","lvl":"2","cnt":"logout","scr":"logout"},
 "login":{"title":"Login","menu":"main","lvl":"-1"}
 }}
