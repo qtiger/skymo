@@ -2,7 +2,7 @@
 <h2>Welcome to Skymo</h2>
 <p>You are logged in. Please use the menu above</p>
 <? else: ?>
-<form action="?adm=login" method="post">
+<form action="/login" method="post">
 <? if ($t->status == "ok"): ?>
 <span class="msg">Please enter your username and password to log in</span>
 <? else: ?>
