@@ -2,7 +2,8 @@
 "page":{"/":{"title":"Home Page","tpl":"home","menu":"main","cnt":"home","mname":"Home"},
 "news":{"title":"News","json":"news","tpl":"list","menu":"main"},
 "about":{"title":"About","cnt":"article","menu":"main"},
-"adm":{"title":"Admin","menu":"main","lvl":"20"},
+"adm":{"title":"Site Admin","tpl":"adm","menu":"main","scr":"adm","mname":"Admin","lvl":"20"},
+"page":{"title":"Page Admin","tpl":"pgadm","scr":"adm","lvl":"20"},
 "logout":{"title":"Logout","menu":"main","lvl":"2","cnt":"logout","scr":"logout"},
-"login":{"title":"Login","menu":"main","lvl":"-1"}
-}}
+"login":{"title":"Login","tpl":"login","scr":"login","menu":"main","lvl":"-1"}}
+}

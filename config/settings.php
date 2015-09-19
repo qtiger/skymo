@@ -27,14 +27,13 @@ define(_PAGETAG_,"page");
 
 # The url parameters
 define (_PAGEPAR_,"p");
-define (_ADMPAR_,"adm");
+define (_ADMPAR_,"p2");
 
 # How long to stay logged in if inactive
 define (_LOGINTIMEOUT_,600); # 600 seconds = 10mins
 
 # The site file is the json file which contains the website structure
 $siteFile =_JSONDIR_ ."site.json";
-$admFile =_JSONDIR_ ."adm.json";
 
 # User levels define how much of the site a user can see
 define (_USR_GUEST_,1); # Not logged in

@@ -13,14 +13,8 @@ if (isset($allowedHost)) if ($_SERVER[HTTP_HOST] != $allowedHost) {
 parse_str($_SERVER['QUERY_STRING'],$q);
 
 $url="/";
-if (array_key_exists(_ADMPAR_,$q)) {
-  $j = skymo::getJson($admFile);
-  $queryPage = _ADMPAR_;
-  }
-else {
-  $j=skymo::getJson($siteFile);
-  $queryPage = _PAGEPAR_;
-  }
+$j=skymo::getJson($siteFile);
+$queryPage = _PAGEPAR_;
 
 if (is_array($j)) {
   if (array_key_exists(_PAGETAG_,$j)) {
