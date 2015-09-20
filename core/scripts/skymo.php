@@ -10,8 +10,11 @@ class skymo {
     }
 
   public static function stringOK($s) {
-    if (!preg_match('/[^A-Za-z0-9\-_]/', $s)) return $s;
-      else return false;
+    $ret = false;
+    if ($s != "")
+      if (!preg_match('/[^A-Za-z0-9\-_]/', $s))
+        $ret = $s;
+    return $ret;
     }
   }
 ?>

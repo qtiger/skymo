@@ -1,9 +1,8 @@
-{"site":{"name":"skymo","title":"skymo","ftr":"&copy;2015 skymo<br><a href='https://github.com/qtiger/skymo'>skymo</a> on GitHub"},
-"page":{"/":{"title":"Home Page","tpl":"home","menu":"main","cnt":"home","mname":"Home"},
+{"site":{"name":"skymo","title":"skymo","ftr":"&copy;2015 skymo<br><a href='https:\/\/github.com\/qtiger\/skymo'>skymo<\/a> on GitHub"},
+"page":{"\/":{"title":"skymo Home","tpl":"home","menu":"main","cnt":"home","mname":"Home"},
 "news":{"title":"News","json":"news","tpl":"list","menu":"main"},
 "about":{"title":"About","cnt":"article","menu":"main"},
 "adm":{"title":"Site Admin","tpl":"adm","menu":"main","scr":"adm","mname":"Admin","lvl":"20"},
 "page":{"title":"Page Admin","tpl":"pgadm","scr":"adm","lvl":"20"},
 "logout":{"title":"Logout","menu":"main","lvl":"2","cnt":"logout","scr":"logout"},
-"login":{"title":"Login","tpl":"login","scr":"login","menu":"main","lvl":"-1"}}
-}
+"login":{"title":"Login","tpl":"login","scr":"login","menu":"main","lvl":"-1"}}}
