@@ -1,8 +1,8 @@
-[{"name":"Title","tag":"title"},
-{"name":"Template","tag":"tpl"},
-{"name":"Content","tag":"cnt"},
-{"name":"Menu Name","tag":"menu"},
-{"name":"Menu Item","tag":"mname"},
-{"name":"Parameters","tag":"json"},
-{"name":"Script","tag":"scr"},
-{"name":"User Level","tag":"lvl"}]
+[{"name":"Title","tag":"title","type":"s"},
+{"name":"Template","tag":"tpl","type":"f"},
+{"name":"Content","tag":"cnt","type":"f"},
+{"name":"Menu Name","tag":"menu","type":"f"},
+{"name":"Menu Item","tag":"mname","type":"s"},
+{"name":"Parameters","tag":"json","type":"f"},
+{"name":"Script","tag":"scr","type":"f"},
+{"name":"User Level","tag":"lvl","type":"n"}]

@@ -1,18 +1,18 @@
 <?php
 class fTempl {
   private $tmpl="master.tpl";
-  private $sFile = array();
+  public $sf = array();
   public $pg=array();
   public $st=array();
   public $mn=array();
   public $content="";
   public $sec;
 
-  function __construct($sFile,$url,$sec) {
+  function __construct($sf,$url,$sec) {
     $this->sec = $sec;
-    $this->sFile = $sFile;                  
-    $this->pg = $sFile[_PAGETAG_][$url];                  
-    $this->st = $sFile["site"];
+    $this->sf = $sf;                  
+    $this->pg = $sf[_PAGETAG_][$url];                  
+    $this->st = $sf["site"];
     if (array_key_exists("json",$this->pg)) {
       $json = skymo::getJson(_JSONDIR_ . $this->pg["json"] . ".json");
       if (is_array($json)) {
@@ -23,7 +23,7 @@ class fTempl {
     }
 
   private function buildMenu() {
-    foreach ($this->sFile[_PAGETAG_] as $url=>$p) {
+    foreach ($this->sf[_PAGETAG_] as $url=>$p) {
       if ($this->sec->viewPage($p, true)) {
         if (array_key_exists("menu",$p)) {
           if (array_key_exists("mname",$p)) $nm = $p['mname'];
@@ -41,8 +41,8 @@ class fTempl {
   public function eBtn($name, $tag) {
     $ret ="";
     if ($name != "")
-      if ($tag == "tpl" || $tag == "cnt" || $tag == "json" || $tag == "scr" || $tag == "menu")
-        $ret = "<a href='?adm=file&nm=$name&tag=$tag'>Edit</a>";
+      if ($tag == "tpl" || $tag == "cnt" || $tag == "json" || $tag == "scr")
+        $ret = "<a href='/$tag/$name'>Edit</a>";
 
     return $ret;
     }

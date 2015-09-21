@@ -1,14 +1,20 @@
 <?php
 $changes = false;
 
-function setfld($fld) {
+function setfld($fld, $type) {
   global $t, $changes;
 
   if (array_key_exists($fld,$_POST)) {
-    $s = skymo::stringOK ($_POST[$fld]);
-    if ($s) {
-      $t->sf[_PAGETAG_][$t->pgurl][$fld] = $_POST[$fld];
+    if ($_POST[$fld] == "" && array_key_exists($fld, $t->sf[_PAGETAG_][$t->pgurl])) {
+      unset($t->sf[_PAGETAG_][$t->pgurl][$fld]);
       $changes = true;
+      }
+    else {
+      $s = skymo::stringOK ($_POST[$fld], $type);
+      if ($s) {
+        $t->sf[_PAGETAG_][$t->pgurl][$fld] = $_POST[$fld];
+        $changes = true;
+        }
       }
     }
   }
@@ -26,7 +32,6 @@ function write() {
       }
     }
 
-$t->sf = skymo::getJson($siteFile);
 $t->msg = "Ready";
 if (array_key_exists(_ADMPAR_,$q)) {
   $t->msg = "Set";
@@ -36,7 +41,8 @@ if (array_key_exists(_ADMPAR_,$q)) {
   if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $t->msg="Posted";
     foreach ($t->flds as $fld)
-      setfld($fld["tag"]);
+      setfld($fld["tag"],$fld["type"]);
+
     write();
     }
   $t->sitepg = $t->sf[_PAGETAG_][$q[_ADMPAR_]];
