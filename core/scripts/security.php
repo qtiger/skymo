@@ -130,9 +130,11 @@ class userSecurity
     return $this->loginLevel;
     }
 
-  public function viewPage($p,$menu=false) {
-    if (array_key_exists("lvl",$p))
+  public function viewPage($p,$menu=false,$btn=false) {
+    if (!$btn && array_key_exists("lvl",$p))
       $pLvl = $p["lvl"];
+    elseif ($btn && array_key_exists("elvl",$p))
+    $pLvl = $p["elvl"];
     else $pLvl = 1;
 
     if ($menu && $pLvl<0)

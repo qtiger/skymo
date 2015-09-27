@@ -34,17 +34,21 @@ function write() {
 
 $t->msg = "Ready";
 if (array_key_exists(_ADMPAR_,$q)) {
-  $t->msg = "Set";
-  $t->pgurl = $q[_ADMPAR_];
-  $t->flds = skymo::getJson(_FLDDIR_ . _PAGETAG_ . ".json");
-
-  if ($_SERVER["REQUEST_METHOD"]=="POST") {
-    $t->msg="Posted";
-    foreach ($t->flds as $fld)
-      setfld($fld["tag"],$fld["type"]);
-
-    write();
-    }
   $t->sitepg = $t->sf[_PAGETAG_][$q[_ADMPAR_]];
+  if (!$t->sec->viewPage($t->sitepg))
+    skymo::http403();
+  else {
+    $t->msg = "Set";
+    $t->pgurl = $q[_ADMPAR_];
+    $t->flds = skymo::getJson(_FLDDIR_ . _PAGETAG_ . ".json");
+
+    if ($_SERVER["REQUEST_METHOD"]=="POST") {
+      $t->msg="Posted";
+      foreach ($t->flds as $fld)
+        setfld($fld["tag"],$fld["type"]);
+
+      write();
+      }
+    }
   }
 ?>

@@ -38,11 +38,13 @@ class fTempl {
       }
     }
 
-  public function eBtn($name, $tag) {
+  public function eBtn($name, $fld) {
     $ret ="";
+    $tag = $fld["tag"];
     if ($name != "")
       if ($tag == "tpl" || $tag == "cnt" || $tag == "json" || $tag == "scr")
-        $ret = "<a href='/$tag/$name'>Edit</a>";
+        if ($this->sec->viewPage($fld,false,true))
+          $ret = "<a href='/$tag/$name'>Edit</a>";
 
     return $ret;
     }

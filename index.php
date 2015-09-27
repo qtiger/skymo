@@ -4,11 +4,8 @@ require_once _SCRDIR_ . "templ.php";
 require_once _SCRDIR_ . "skymo.php";
 require_once _SCRDIR_ . "security.php";
 
-if (isset($allowedHost)) if ($_SERVER[HTTP_HOST] != $allowedHost) {
-  header("HTTP/1.0 404 Not Found");
-  include "errors/404.html";
-  exit();
-  }
+if (isset($allowedHost)) if ($_SERVER[HTTP_HOST] != $allowedHost)
+  skymo::http404();
 
 parse_str($_SERVER['QUERY_STRING'],$q);
 
@@ -29,17 +26,9 @@ if (is_array($j)) {
           include _SCRDIR_ . $j[_PAGETAG_][$url] ["scr"]. ".php";
         $t->show();
         }
-      else {
-        header("HTTP/1.0 403 Forbidden");
-        include "errors/403.html";
-        exit();
-        }
+      else skymo::http403();
       }
-    else {
-      header("HTTP/1.0 404 Not Found");
-      include "errors/404.html";
-      exit();
-      }
+    else skymo::http404();
     }
   elseif (_DEBUG_) trigger_error ("Page element not found in site file");
   }

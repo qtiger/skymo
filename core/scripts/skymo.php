@@ -44,5 +44,17 @@ class skymo {
 
     return $ret;
     }
+
+  public static function http404() {
+    header("HTTP/1.0 404 Not found");
+    include "errors/404.html";
+    exit();
+    }
+
+  public static function http403() {
+    header("HTTP/1.0 403 Forbidden");
+    include "errors/403.html";
+    exit();
+    }
   }
 ?>

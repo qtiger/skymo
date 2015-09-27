@@ -1,8 +1,8 @@
-[{"name":"Title","tag":"title","type":"s"},
-{"name":"Template","tag":"tpl","type":"f"},
-{"name":"Content","tag":"cnt","type":"f"},
-{"name":"Menu Name","tag":"menu","type":"f"},
-{"name":"Menu Item","tag":"mname","type":"s"},
-{"name":"Parameters","tag":"json","type":"f"},
-{"name":"Script","tag":"scr","type":"f"},
-{"name":"User Level","tag":"lvl","type":"n"}]
+[{"name":"Title","tag":"title","type":"s","lvl":"15"},
+{"name":"Template","tag":"tpl","type":"f","lvl":"15","elvl":"25"},
+{"name":"Content","tag":"cnt","type":"f","lvl":"15","elvl":"15"},
+{"name":"Menu Name","tag":"menu","type":"f","lvl":"15"},
+{"name":"Menu Item","tag":"mname","type":"s","lvl":"15"},
+{"name":"Parameters","tag":"json","type":"f","lvl":"15","elvl":"15"},
+{"name":"Script","tag":"scr","type":"f","lvl":"20","elvl":"25"},
+{"name":"User Level","tag":"lvl","type":"n","lvl":"20"}]
