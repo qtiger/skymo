@@ -33,7 +33,8 @@ define (_ADMPAR_,"p2");
 define (_LOGINTIMEOUT_,600); # 600 seconds = 10mins
 
 # The site file is the json file which contains the website structure
-$siteFile =_JSONDIR_ ."site.json";
+$siteFile =_JSONDIR_ . "site.json";
+$msgFile = _JSONDIR_ . "msg.json";
 
 # User levels define how much of the site a user can see
 $userLevels = array("guest"=>"1","registered"=>"5","approved"=>"10","editor"=>"15","admin"=>"20","developer"=>"25");

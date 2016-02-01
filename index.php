@@ -11,6 +11,8 @@ parse_str($_SERVER['QUERY_STRING'],$q);
 
 $url="/";
 $j=skymo::getJson($siteFile);
+$msg=skymo::getJson($msgFile);
+
 $queryPage = _PAGEPAR_;
 
 if (is_array($j)) {
