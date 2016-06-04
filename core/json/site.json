@@ -45,7 +45,8 @@
 
         "tpl": {
             "title": "Template Editor",
-            "cnt": "soon",
+            "tpl": "tpledit",
+            "scr":"tpledit",
             "lvl": "25"
         },
 

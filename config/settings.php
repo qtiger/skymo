@@ -6,6 +6,9 @@ define (_VERSION_, "v0.1.1");
 # /skymo/
 define (_URLPREFIX_,"/");
 
+define (_SESSIONCOOKIE_,"LKP209L");
+define (_UIDCOOKIE_,"SDFDD65%");
+
 # The following lines determine where skymo looks for its files
 define(_JSONDIR_,"core/json/");
 define(_CNTDIR_,"core/content/");

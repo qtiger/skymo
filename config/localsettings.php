@@ -8,7 +8,7 @@ if (file_exists("config/confidentialsettings.php"))
 
 # Comment out or remove this line in production enviroments to supress
 # error messages being displayed to the user
-# define("_DEBUG_",true);
+define("_DEBUG_",true);
 
 # location of the password file
 #define(_PASSWD_,"core/adm/blank_acc.json"); # Usernames and passwords

@@ -15,6 +15,11 @@ $msg=skymo::getJson($msgFile);
 
 $queryPage = _PAGEPAR_;
 
+if (_DEBUG_) {
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+}
+
 if (is_array($j)) {
   if (array_key_exists(_PAGETAG_,$j)) {
     if (array_key_exists($queryPage,$q)) $url = $q[$queryPage];
