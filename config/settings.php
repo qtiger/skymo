@@ -1,5 +1,5 @@
 <?php
-define (_VERSION_, "v0.1.0");
+define (_VERSION_, "v0.1.1");
 
 # Prefix if URL is not at site root. eg if
 # http://example.com/skymo prefix would be

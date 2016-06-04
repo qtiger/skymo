@@ -1,0 +1,284 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"array_ke",
+				"array_key_exists"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"h",
+				"href	Attr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 1086,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/nosandals/www/bible/scripts/study.php",
+		"/Users/nosandals/Dev/XCodeProjects/bbl_ios/bbl_ios/Assets.xcassets/AppIcon.appiconset/Contents.json",
+		"/Users/nosandals/Dev/Python/resample.py",
+		"/Users/nosandals/Dev/Python/resample-mac.py",
+		"/Users/nosandals/www/no_sandals/settings/localsettings.php",
+		"/Users/nosandals/www/bible/scripts/iso3166.php",
+		"/Users/nosandals/AndroidStudioProjects/discoverapp/app/src/main/res/values/strings.xml",
+		"/Users/nosandals/www/bible/templates/translogin_app.html",
+		"/Users/nosandals/Documents/DiscoverApp/UyghurStudies/lesson1.html",
+		"/Users/nosandals/www/gt/index.php",
+		"/Users/nosandals/www/bible/scripts/setlang.php",
+		"/Users/nosandals/www/bible/templates/lang.html",
+		"/Users/nosandals/www/bible/templates/master.html",
+		"/Users/nosandals/www/bible/scripts/dbp.php",
+		"/Users/nosandals/www/bible/androidutils/dump-trans.php",
+		"/Users/nosandals/www/bible/translations/en-study.json",
+		"/Users/nosandals/www/bible/android.php",
+		"/Users/nosandals/Documents/DiscoverApp/UyghurStudies/style.css",
+		"/Users/nosandals/Downloads/UyghurStudies/style.css",
+		"/Users/nosandals/Downloads/Lesson 1.html",
+		"/Users/nosandals/www/bible/index2.php",
+		"/Users/nosandals/www/bible/translations/sw-study.json",
+		"/Users/nosandals/www/BibleScripts/bible/dump-trans.php",
+		"/Users/nosandals/www/bible/translations/Cntry.php",
+		"/Users/nosandals/www/bible/templates/list.html",
+		"/Users/nosandals/www/bible/scripts/translate.php",
+		"/Users/nosandals/Dev/skymo.sublime-project",
+		"/Users/nosandals/www/skymo/core/json/msg.json",
+		"/Users/nosandals/www/skymo/config/settings.php",
+		"/Users/nosandals/www/skymo/index.php",
+		"/Users/nosandals/www/skymo/core/json/site.json",
+		"/Users/nosandals/www/skymo/core/json/fields/page.json",
+		"/Users/nosandals/www/skymo/core/tpl/login.tpl",
+		"/Users/nosandals/www/skymo/core/scripts/login.php",
+		"/Users/nosandals/www/skymo/core/scripts/mdedit.php",
+		"/Users/nosandals/www/skymo/core/tpl/mdedit.tpl",
+		"/Users/nosandals/www/skymo/t.php",
+		"/Users/nosandals/www/skymo/core/json/news.json",
+		"/Users/nosandals/www/skymo/core/scripts/adm.php",
+		"/Users/nosandals/www/skymo/core/tpl/adm.tpl",
+		"/Users/nosandals/www/skymo/config/confidentialsettings.php",
+		"/Users/nosandals/www/skymo/config/localsettings.php",
+		"/Users/nosandals/www/skymo/core/tpl/home.tpl",
+		"/Users/nosandals/www/skymo/core/adm/blank_acc.json",
+		"/Users/nosandals/www/bible/settings/settings.php",
+		"/Users/nosandals/www/no_sandals/test.php",
+		"/Users/nosandals/www/pangolin/settings/localsettings.php",
+		"/Users/nosandals/home/connect.php",
+		"/Users/nosandals/Documents/NSContact/nscontact.sql",
+		"/Volumes/NO NAME/t.java",
+		"/Users/nosandals/Dev/Python/t.py",
+		"/Users/nosandals/Dev/Python/incExpSet.py",
+		"/Users/nosandals/Dev/Python/read.py",
+		"/Users/nosandals/Dev/Python/index.py",
+		"/Users/nosandals/www/ipc/index.php",
+		"/Users/nosandals/Documents/DiscoverApp/Progress.xml",
+		"/Users/nosandals/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"trans.php",
+			"\\",
+			"\\n",
+			"&nbsp;",
+			"<br>",
+			"&gt;",
+			"&lt;"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"trans_app.php",
+			" ",
+			"\\n",
+			">",
+			"<"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "skymo.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
