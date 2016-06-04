@@ -7,17 +7,17 @@ The structure of a **skymo** site is held in JSON files. The admin interface all
 ##Pages
 Pages are the building blocks of a **skymo** site. A page can be vary be a simple piece of content, or a complex custom piece of functionality (or anything in between).
 
-Field|Description
--|-
-URL|The page address which is appended to the base URL
-Title|The page title. (If menu name is not set this is used as the menu name)
-Template|A PHP template which defines the look of the page
-Content|A markdown file which defines the page content 
-Menu Name|Which menu appears on this page
-Menu Item|The name of this page as it appears on the menu
-Sections|A list of content snippets which the page includes 
-Script|A PHP script which controls the page behaviour 
-User Level|User level required to view page. If blank, all users may see this page 
+|Field|Description|
+|---|---|
+|URL|The page address which is appended to the base URL|
+|Title|The page title. (If menu name is not set this is used as the menu name)|
+|Template|A PHP template which defines the look of the page|
+|Content|A markdown file which defines the page content |
+|Menu Name|Which menu appears on this page|
+|Menu Item|The name of this page as it appears on the menu|
+|Sections|A list of content snippets which the page includes |
+|Script|A PHP script which controls the page behaviour |
+|User Level|User level required to view page. If blank, all users may see this page |
 
 A page generally needs at least either content, a template or a script, but it may have any or all of these. For example a simple page may simply have content and slot directly into the site's master template. A more complex page may have a template and either content or sections (for example a list of news items)
 
@@ -39,12 +39,12 @@ These actions can still be achieved by using a file editor on the appropriate si
 ##User Level 
 Accessed to the site is determined by user levels. There are six defined user levels, but if required it is possible to add more.
 
-Level|Description|Value
--|-|-
-Guest|Can view the site, but has no access to the Admin interface|1
-Registered|Guest has registered with the site,  but is not yet approved|5
-Approved|An approved registered user|10
-Author|Can edit content via the Admin interface|15
-Administrator|Can edit content, templates and assign scripts to pages|20
-Developer|Can edit everything including scripts|25
+|Level|Description|Value|
+|---|---|---|
+|Guest|Can view the site, but has no access to the Admin interface|1|
+|Registered|Guest has registered with the site,  but is not yet approved|5|
+|Approved|An approved registered user|10|
+|Author|Can edit content via the Admin interface|15|
+|Administrator|Can edit content, templates and assign scripts to pages|20|
+|Developer|Can edit everything including scripts|25|
 
