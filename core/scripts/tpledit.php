@@ -12,6 +12,9 @@ if (file_exists($fn)) {
 
     if (array_key_exists("SaveBtn",$_POST)) {
       $st1 = file_put_contents($fn,$_POST["tpl"]);
+
+      if ($st1 === false) $t->err = $msg["SaveErr"];
+      else  $t->err = $msg["SaveOk"];
     }
   }
 }

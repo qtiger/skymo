@@ -4,6 +4,8 @@ require_once "core/lib/parsedown/Parsedown.php";
 $fn = _MDDIR_ . $q[_ADMPAR_] . _MDEXT_;
 $hfn = _CNTDIR_ . $q[_ADMPAR_]  . _CNTEXT_;
 
+$t->err = "";
+
 $t->mdname = $q[_ADMPAR_];
 if (file_exists($fn)) {
   $t->md = file_get_contents($fn);
