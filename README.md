@@ -5,7 +5,7 @@
 The structure of a **skymo** site is held in JSON files. The admin interface allows this to be edited, although not all the features have been implemented 
 
 ##Pages
-Pages are the building blocks of a **skymo** site. A page can be vary be a simple piece of content, or a complex custom piece of functionality (or anything in between).
+Pages are the building blocks of a **skymo** site. A page can be vary from a simple piece of content, to a complex custom piece of functionality (or anything in between).
 
 |Field|Description|
 |---|---|
@@ -19,18 +19,17 @@ Pages are the building blocks of a **skymo** site. A page can be vary be a simpl
 |Script|A PHP script which controls the page behaviour |
 |User Level|User level required to view page. If blank, all users may see this page |
 
-A page generally needs at least either content, a template or a script, but it may have any or all of these. For example a simple page may simply have content and slot directly into the site's master template. A more complex page may have a template and either content or sections (for example a list of news items)
+A page generally needs at least either content, a template or a script. However, it may have any or all of these. For example a simple page may just have content and slot directly into the site's master template. A more complex page may have a template and either content or sections (for example a list of news items)
 
 A script may be used in conjunction with a template and/or content to implement more advanced behaviour.
 
 ##Admin Interface 
-The admin interface currently allows access to some editing functionality for the site. This includes editing most of the page details above, and a markdown editor for the content files.
+The admin interface currently allows access to some editing functionality for the site. This includes editing most of the page details above, a markdown editor for the content files and a basic template editor.
 
 As of the current version, the following features are not yet implemented:
 
 * Ability to add new page
 * Ability to change the order of site items 
-* Template editor 
 * Script editor 
 * Menu editor
 

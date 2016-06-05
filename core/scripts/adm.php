@@ -44,9 +44,9 @@ if (array_key_exists(_ADMPAR_,$q)) {
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
       $t->msg="Posted";
-      foreach ($t->flds as $fld)
+      foreach ($t->flds as $fld) {
         setfld($fld["tag"],$fld["type"]);
-
+      }
       write();
       }
     }

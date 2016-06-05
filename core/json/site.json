@@ -46,7 +46,7 @@
         "tpl": {
             "title": "Template Editor",
             "tpl": "tpledit",
-            "scr":"tpledit",
+            "scr": "tpledit",
             "lvl": "25"
         },
 
