@@ -1,4 +1,6 @@
 <?php
+$t->codemirror = true;
+
 $fn = _TPLDIR_ . $q[_ADMPAR_] . _TPLEXT_;
 
 $t->tplname = $q[_ADMPAR_];
