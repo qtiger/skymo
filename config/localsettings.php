@@ -11,7 +11,8 @@ if (file_exists("config/confidentialsettings.php"))
 define("_DEBUG_",true);
 
 # location of the password file
-#define(_PASSWD_,"core/adm/blank_acc.json"); # Usernames and passwords
+# define("_PASSWD_","core/adm/blank_acc.json"); # Usernames and passwords
+
 # If on shared hosting $allowedHost can be used to ensure that 
 # skymo can only be accessed from the correct URL eg setting
 # $allowedHost = subdomain.mydomain.com
