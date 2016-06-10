@@ -1,7 +1,7 @@
 <?php
 $changes = false;
 
-function setfld($fld, $type) {
+/*function setfld($fld, $type) {
   global $t, $changes;
 
   if (array_key_exists($fld,$_POST)) {
@@ -30,7 +30,7 @@ function write() {
         file_put_contents ($siteFile, $j);
         }
       }
-    }
+    } */
 
 $t->msg = "Ready";
 if (array_key_exists(_ADMPAR_,$q)) {
@@ -43,11 +43,14 @@ if (array_key_exists(_ADMPAR_,$q)) {
     $t->flds = skymo::getJson(_FLDDIR_ . _PAGETAG_ . ".json");
 
     if ($_SERVER["REQUEST_METHOD"]=="POST") {
+      $changed = false;
       $t->msg="Posted";
       foreach ($t->flds as $fld) {
-        setfld($fld["tag"],$fld["type"]);
-      }
-      write();
+        if (array_key_exists($fld["tag"], $t->sf[_PAGETAG_][$t->pgurl]))
+          $ret = skymo::setfld($fld["tag"],$fld["type"]);
+          if ($ret) $changed = true;
+        }
+      if ($changed) skymo::write();
       }
     }
   }

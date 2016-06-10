@@ -18,32 +18,35 @@ class skymo {
     if ($type == 'n' && !preg_match('/[^0-9\-]/', $s))
         $ret = $s;
     return $ret;
-    }
+  }
 
-  public static function setfld($fld, $type) {
+  public static function setfld($fld, $value, $type) {
     global $t;
+    $changed = false;
 
-    if (array_key_exists($fld,$_POST)) {
-      if ($_POST[$fld] == "" && array_key_exists($fld, $t->sf[_PAGETAG_][$t->pgurl]))
-        unset($t->sf[_PAGETAG_][$t->pgurl][$fld]);
-      else {
-        $s = skymo::stringOK ($_POST[$fld], $type);
-        if ($s)
-          $t->sf[_PAGETAG_][$t->pgurl][$fld] = $_POST[$fld];
-        }
+    if ($value == "" && array_key_exists($fld, $t->sf[_PAGETAG_][$t->pgurl]))
+      unset($t->sf[_PAGETAG_][$t->pgurl][$fld]);
+    else {
+      $s = skymo::stringOK ($value, $type);
+      if ($s) {
+        $t->sf[_PAGETAG_][$t->pgurl][$fld] = $value;
+        $changed = true;
       }
     }
 
+    return $changed;
+  }
+
   public static function write() {
     global $t, $siteFile;
-    
     $ret = false;
+    
     $j = str_replace("},","},\n",json_encode($t->sf,128));
     if ($j)
       $ret = file_put_contents ($siteFile, $j);
 
     return $ret;
-    }
+  }
 
   public static function http404() {
     header("HTTP/1.0 404 Not found");
