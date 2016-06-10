@@ -7,7 +7,7 @@
   <? if ($t->sec->viewPage($p)): ?>
   <label><?= $p["name"] ?></label><br>
   <? if (array_key_exists($p['tag'],$t->sitepg)): ?>
-  <input type="text" value="<?= $t->sitepg[$p['tag']] ?>" name="<?= $p['tag'] ?>"> <?= $t->eBtn($t->sitepg[$p['tag']],$p) ?><br>
+  <input type="text" value="<?= $t->sf[_PAGETAG_][$t->pgurl][$p['tag']] ?>" name="<?= $p['tag'] ?>"> <?= $t->eBtn($t->sitepg[$p['tag']],$p) ?><br>
   <? else: ?>
   <input type="text" value="" name="<?= $p['tag'] ?>"><br>
   <? endif?>
